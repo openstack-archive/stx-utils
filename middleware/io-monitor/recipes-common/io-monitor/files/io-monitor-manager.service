@@ -1,0 +1,18 @@
+[Unit]
+Description=Daemon for polling iostat status
+After=local-fs.target
+Before=pmon.service
+
+[Service]
+Type=forking
+Restart=no
+KillMode=process
+RemainAfterExit=yes
+ExecStart=/etc/rc.d/init.d/io-monitor-manager start
+ExecStop=/etc/rc.d/init.d/io-monitor-manager stop
+ExecReload=/etc/rc.d/init.d/io-monitor-manager reload
+PIDFile=/var/run/io-monitor/io-monitor-manager.pid
+
+[Install]
+WantedBy=multi-user.target
+

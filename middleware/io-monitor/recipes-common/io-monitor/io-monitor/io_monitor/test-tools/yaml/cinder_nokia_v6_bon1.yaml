@@ -1,0 +1,89 @@
+heat_template_version: '2013-05-23'
+
+description:
+  One Bonnie, 5 volumes. No root volumes, CoW images
+
+parameters:
+  Network_Name:
+    type: string
+    description: Network which is used for servers
+    default: tenant1-mgmt-net
+
+resources:
+
+  Test_volume_1:
+    type: OS::Cinder::Volume
+    properties:
+      name: Test_volume_1
+      size: 5
+
+  Test_volume_2:
+    type: OS::Cinder::Volume
+    properties:
+      name: Test_volume_2
+      size: 5
+
+  Test_volume_3:
+    type: OS::Cinder::Volume
+    properties:
+      name: Test_volume_3
+      size: 5
+
+  Test_volume_4:
+    type: OS::Cinder::Volume
+    properties:
+      name: Test_volume_4
+      size: 5
+
+  Test_volume_5:
+    type: OS::Cinder::Volume
+    properties:
+      name: Test_volume_5
+      size: 5
+
+  Stabi_volume_write:
+    type: OS::Nova::Server
+    properties:
+      name: { list_join : [ "-", [{get_param: 'OS::stack_name'}, 'Stabi_volume_write']]}
+      image: centos_nkstress
+      flavor: smallvol
+      #key_name: newkey
+      availability_zone: "nova"
+      networks:
+       - network: { get_param: Network_Name }
+      block_device_mapping:
+        - { volume_id: { get_resource: Test_volume_1 }, device_name: "vdb" }
+        - { volume_id: { get_resource: Test_volume_2 }, device_name: "vdc" }
+        - { volume_id: { get_resource: Test_volume_3 }, device_name: "vdd" }
+        - { volume_id: { get_resource: Test_volume_4 }, device_name: "vde" }
+        - { volume_id: { get_resource: Test_volume_5 }, device_name: "vdf" }
+
+      user_data_format: RAW
+      user_data: |
+        #cloud-config
+        user: centos
+        password: centos
+        chpasswd: {expire: False}
+        ssh_pwauth: True
+        runcmd:
+          - echo "Creating file systems..." > /root/stabi_1.log&
+          - mkfs.ext4 /dev/vdb
+          - mkfs.ext4 /dev/vdc
+          - mkfs.ext4 /dev/vdd
+          - mkfs.ext4 /dev/vde
+          - mkfs.ext4 /dev/vdf
+          - echo "Mounting directories..." >> /root/stabi_1.log&
+          - mkdir /mnt/b
+          - mkdir /mnt/c
+          - mkdir /mnt/d
+          - mkdir /mnt/e
+          - mkdir /mnt/f
+          - mount /dev/vdb /mnt/b/
+          - mount /dev/vdc /mnt/c/
+          - mount /dev/vdd /mnt/d/
+          - mount /dev/vde /mnt/e/
+          - mount /dev/vdf /mnt/f/
+          - echo "Starting bonnie++..." >> /root/stabi_1.log&
+          - date >> /root/stabi_1.log&
+          - /usr/sbin/bonnie++ -b -n 100 -d /mnt/b -u root -x 9999999 >> /root/stabi_1.log&
+

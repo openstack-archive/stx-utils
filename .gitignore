@@ -1,0 +1,7 @@
+/downloads
+installer-prebuilt
+.idea
+*.egg-info
+*.swp
+*.pyc
+.cache/

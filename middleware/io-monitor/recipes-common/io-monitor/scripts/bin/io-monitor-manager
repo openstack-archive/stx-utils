@@ -1,0 +1,17 @@
+#!/usr/bin/env python
+#
+# Copyright (c) 2016 Wind River Systems, Inc.
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+
+import sys
+
+try:
+    from io_monitor import io_monitor_manager
+except EnvironmentError as e:
+    print >> sys.stderr, "Error importing io_monitor_manager: ", str(e)
+    sys.exit(1)
+
+io_monitor_manager.main()
