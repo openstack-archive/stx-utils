@@ -169,7 +169,6 @@ mwa-sparta/security/libtpms
 mwa-sparta/security/swtpm
 mwa-sparta/security/audit
 mwa-cleo/snmp-ext
-middleware/util/recipes-common/libtrap-handler
 mwa-chilon/cgcs-patch
 mwa-chilon/patch-alarm
 middleware/patching/recipes-common/enable-dev-patch
