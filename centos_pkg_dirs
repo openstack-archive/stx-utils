@@ -40,6 +40,7 @@ mwa-perian/openstack/openstack-magnum
 mwa-perian/openstack/openstack-magnum-ui
 mwa-perian/openstack/openstack-ras
 mwa-perian/openstack/openstack-panko
+mwa-perian/openstack/openstack-os-vif
 mwa-perian/openstack/python-ceilometer
 mwa-perian/openstack/python-ceilometerclient
 mwa-perian/openstack/python-cinder
