@@ -183,7 +183,6 @@ mwa-pitta/config-gate
 mwa-chilon/requests-toolbelt
 mwa-perian/openstack/python-wsme
 mwa-pitta/puppet-manifests
-mwa-sparta/devtools/puppet-modules/puppet-ovs_dpdk
 mwa-sparta/devtools/puppet-modules/puppet-boolean-1.0.2
 mwa-sparta/devtools/puppet-modules/puppet-create_resources
 mwa-sparta/devtools/puppet-modules/puppet-dnsmasq
