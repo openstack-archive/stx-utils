@@ -1,0 +1,10 @@
+---
+- project:
+    check:
+      jobs:
+        - openstack-tox-bashate:
+            voting: false
+    gate:
+      jobs:
+        - openstack-tox-bashate:
+            voting: false

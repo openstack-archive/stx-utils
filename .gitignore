@@ -1,7 +1,9 @@
+.cache/
+*.egg-info
+.idea
+*.pyc
+*.swp
+.tox
+*~
 /downloads
 installer-prebuilt
-.idea
-*.egg-info
-*.swp
-*.pyc
-.cache/
