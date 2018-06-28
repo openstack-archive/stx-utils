@@ -1,0 +1,10 @@
+Code-Review+2: Jason McKenna <jason.mckenna@windriver.com>
+Workflow+1: Jason McKenna <jason.mckenna@windriver.com>
+Code-Review+2: Eric MacDonald <eric.macdonald@windriver.com>
+Workflow+1: Eric MacDonald <eric.macdonald@windriver.com>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Thu, 28 Jun 2018 16:20:54 +0000
+Reviewed-on: https://review.openstack.org/578839
+Project: openstack/stx-utils
+Branch: refs/heads/master
