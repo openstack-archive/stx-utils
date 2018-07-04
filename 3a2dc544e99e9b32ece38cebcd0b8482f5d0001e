@@ -1,0 +1,9 @@
+Code-Review+2: Eric MacDonald <eric.macdonald@windriver.com>
+Workflow+1: Eric MacDonald <eric.macdonald@windriver.com>
+Workflow+1: Dean Troyer <dtroyer@gmail.com>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Wed, 04 Jul 2018 19:05:54 +0000
+Reviewed-on: https://review.openstack.org/579979
+Project: openstack/stx-utils
+Branch: refs/heads/master
