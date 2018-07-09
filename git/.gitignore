@@ -45,3 +45,8 @@
 /distributedcloud-client
 /networking-sfc
 /neutron-lib
+/docker-distribution
+/kubernetes
+/kube-dashboard
+/kube-dns
+/calico
