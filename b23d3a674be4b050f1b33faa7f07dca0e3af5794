@@ -1,0 +1,10 @@
+Code-Review+2: Jason McKenna <jason.mckenna@windriver.com>
+Code-Review+1: Felipe de Jesus Ruiz Garcia <felipe.de.jesus.ruiz.garcia@intel.com>
+Code-Review+2: Dean Troyer <dtroyer@gmail.com>
+Workflow+1: Dean Troyer <dtroyer@gmail.com>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Mon, 09 Jul 2018 20:15:51 +0000
+Reviewed-on: https://review.openstack.org/581107
+Project: openstack/stx-utils
+Branch: refs/heads/master
