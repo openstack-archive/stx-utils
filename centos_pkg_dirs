@@ -1,4 +1,3 @@
 middleware/io-monitor/recipes-common/io-monitor
 middleware/recipes-common/build-info
 middleware/patching/recipes-common/enable-dev-patch
-middleware/util/recipes-common/engtools/hostdata-collectors
