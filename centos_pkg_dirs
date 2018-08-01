@@ -1,6 +1,5 @@
 middleware/io-monitor/recipes-common/io-monitor
 middleware/recipes-common/build-info
-recipes-bsp/grubby
 middleware/patching/recipes-common/enable-dev-patch
 middleware/util/recipes-common/platform-util
 middleware/util/recipes-common/monitor-tools
