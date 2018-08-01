@@ -1,6 +1,5 @@
 middleware/io-monitor/recipes-common/io-monitor
 middleware/recipes-common/build-info
-middleware/perf/recipes-common/io-scheduler
 middleware/util/recipes-common/collector
 recipes-bsp/grubby
 middleware/patching/recipes-common/enable-dev-patch
