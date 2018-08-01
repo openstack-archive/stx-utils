@@ -1,4 +1,3 @@
-middleware/filesystem/recipes-control/filesystem-scripts
 middleware/io-monitor/recipes-common/io-monitor
 middleware/recipes-common/build-info
 middleware/branding/recipes-control/wrs-branding
