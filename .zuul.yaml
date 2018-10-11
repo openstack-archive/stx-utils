@@ -1,9 +1,4 @@
 ---
 - project:
-    check:
-      jobs:
-        - openstack-tox-bashate:
-            voting: false
-    gate:
-      jobs:
-        - noop
+    templates:
+      - noop-jobs
